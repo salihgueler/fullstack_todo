@@ -35,4 +35,13 @@ class TodoResponse {
   Map<String, dynamic> toJson() => _$TodoResponseToJson(this);
 }
 
-class TodoFetchAll { }
+@JsonSerializable()
+class TodoFetchAll {
+
+  const TodoFetchAll();
+
+  factory TodoFetchAll.fromJson(Map<String, dynamic> json) =>
+      _$TodoFetchAllFromJson(json);
+
+  Map<String, dynamic> toJson() => _$TodoFetchAllToJson(this);
+}
