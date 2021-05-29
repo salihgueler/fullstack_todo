@@ -33,10 +33,3 @@ Map<String, dynamic> _$TodoResponseToJson(TodoResponse instance) =>
     <String, dynamic>{
       'listItems': instance.listItems,
     };
-
-TodoFetchAll _$TodoFetchAllFromJson(Map<String, dynamic> json) {
-  return TodoFetchAll();
-}
-
-Map<String, dynamic> _$TodoFetchAllToJson(TodoFetchAll instance) =>
-    <String, dynamic>{};
