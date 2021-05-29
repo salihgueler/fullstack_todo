@@ -15,7 +15,7 @@ TodoResponse function(TodoRequest request, RequestContext context) {
       isChecked: request.isChecked,
     );
     listItems.removeAt(indexOfItem);
-    listItems.add(listItem);
+    listItems.insert(indexOfItem, listItem);
   } else {
     listItems.add(
       ListItem(
