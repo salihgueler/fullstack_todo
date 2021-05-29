@@ -18,6 +18,12 @@ class _TodoHomePageState extends State<TodoHomePage> {
   final _todoRepository = TodoRepository();
 
   @override
+  void initState() {
+    super.initState();
+    _todoRepository.retrieveInitialData();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
