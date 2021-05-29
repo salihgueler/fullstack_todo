@@ -105,7 +105,14 @@ class _TodoHomePageState extends State<TodoHomePage> {
                             snapshot.data![index].copyWith(isChecked: value!),
                           );
                         },
-                        title: Text(snapshot.data![index].title),
+                        title: Text(
+                          snapshot.data![index].title,
+                          style: TextStyle(
+                            decoration: snapshot.data![index].isChecked
+                                ? TextDecoration.lineThrough
+                                : TextDecoration.none,
+                          ),
+                        ),
                       );
                     }
                     return SizedBox();

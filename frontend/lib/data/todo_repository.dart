@@ -14,16 +14,16 @@ class TodoRepository {
       _todoListStream.stream as Stream<List<ListItem>>;
 
   Future<void> addNewListItem(ListItem listItem) async {
-    final greetingRequest = TodoRequest(
+    final todoRequest = TodoRequest(
       isChecked: listItem.isChecked,
       title: listItem.title,
       id: listItem.id,
     );
 
-    final body = jsonEncode(greetingRequest.toJson());
+    final body = jsonEncode(todoRequest.toJson());
 
     final res = await http.post(
-      Uri.parse('http://localhost:8080'),
+      Uri.parse('<TODO-URL>'),
       headers: {'content-type': 'application/json'},
       body: body,
     );
