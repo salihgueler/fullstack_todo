@@ -6,13 +6,26 @@ export 'package:core/core.dart';
 
 @CloudFunction()
 TodoResponse function(TodoRequest request, RequestContext context) {
-  listItems.add(
-    ListItem(
+  final indexOfItem =
+      listItems.indexWhere((element) => element.id == request.id);
+  if (indexOfItem != -1) {
+    final listItem = ListItem(
       id: request.id,
       title: request.title,
       isChecked: request.isChecked,
-    ),
-  );
+    );
+    listItems.removeAt(indexOfItem);
+    listItems.add(listItem);
+  } else {
+    listItems.add(
+      ListItem(
+        id: request.id,
+        title: request.title,
+        isChecked: request.isChecked,
+      ),
+    );
+  }
+
   final response = TodoResponse(
     listItems: listItems,
   );
