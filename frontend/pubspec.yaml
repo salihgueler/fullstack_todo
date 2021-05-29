@@ -33,6 +33,7 @@ dependencies:
       url: https://github.com/salihgueler/fullstack_todo.git
       path: core
       ref: main
+  http: ^0.13.3
 dev_dependencies:
   build_runner: ^2.0.4
   uuid: ^3.0.4

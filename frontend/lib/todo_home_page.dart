@@ -100,7 +100,11 @@ class _TodoHomePageState extends State<TodoHomePage> {
                     if (snapshot.data != null) {
                       return CheckboxListTile(
                         value: snapshot.data![index].isChecked,
-                        onChanged: (bool? value) {},
+                        onChanged: (value) {
+                          _todoRepository.addNewListItem(
+                            snapshot.data![index].copyWith(isChecked: value!),
+                          );
+                        },
                         title: Text(snapshot.data![index].title),
                       );
                     }
