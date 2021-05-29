@@ -34,3 +34,5 @@ class TodoResponse {
 
   Map<String, dynamic> toJson() => _$TodoResponseToJson(this);
 }
+
+class TodoFetchAll { }
