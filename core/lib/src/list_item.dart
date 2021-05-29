@@ -1,21 +1,18 @@
-import 'package:json_annotation/json_annotation.dart';
+import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'list_item.g.dart';
 
-@JsonSerializable()
-class ListItem {
-  ListItem({
-    required this.id,
-    required this.title,
-    required this.isChecked,
-  });
+part 'list_item.freezed.dart';
 
-  final String id;
-  final String title;
-  final bool isChecked;
+@freezed
+class ListItem with _$ListItem {
+  @JsonSerializable(explicitToJson: true)
+  factory ListItem({
+    required String id,
+    required String title,
+    required bool isChecked,
+  }) = _ListItem;
 
   factory ListItem.fromJson(Map<String, dynamic> json) =>
       _$ListItemFromJson(json);
-
-  Map<String, dynamic> toJson() => _$ListItemToJson(this);
 }

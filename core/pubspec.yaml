@@ -14,3 +14,5 @@ dev_dependencies:
   test: ^1.14.4
   json_serializable: ^4.0.0
   build_runner: ^2.0.4
+  freezed: ^0.14.2
+  freezed_annotation: ^0.14.2
