@@ -131,7 +131,7 @@
         <entry key="core">
           <value>
             <list>
-              <option value="$USER_HOME$/.pub-cache/git/fullstack_todo-59f5b7d72c8aa31407abbe086a02dab7e3a124df/core/lib" />
+              <option value="$USER_HOME$/.pub-cache/git/fullstack_todo-d0c46d912bec2c69e9da593e11dead4cfcc011a3/core/lib" />
             </list>
           </value>
         </entry>
@@ -432,7 +432,7 @@
       </option>
     </properties>
     <CLASSES>
-      <root url="file://$USER_HOME$/.pub-cache/git/fullstack_todo-59f5b7d72c8aa31407abbe086a02dab7e3a124df/core/lib" />
+      <root url="file://$USER_HOME$/.pub-cache/git/fullstack_todo-d0c46d912bec2c69e9da593e11dead4cfcc011a3/core/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/_fe_analyzer_shared-22.0.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/analyzer-1.7.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/args-2.1.0/lib" />
