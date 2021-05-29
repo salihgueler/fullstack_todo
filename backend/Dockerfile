@@ -1,5 +1,8 @@
 FROM dart:stable AS build
 
+RUN apt-get -y update
+RUN apt-get -y install git
+
 # Resolve app dependencies.
 WORKDIR /app
 COPY pubspec.* ./
