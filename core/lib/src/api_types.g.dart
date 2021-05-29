@@ -8,7 +8,7 @@ part of 'api_types.dart';
 
 TodoRequest _$TodoRequestFromJson(Map<String, dynamic> json) {
   return TodoRequest(
-    id: json['id'] as int,
+    id: json['id'] as String,
     title: json['title'] as String,
     isChecked: json['isChecked'] as bool,
   );
